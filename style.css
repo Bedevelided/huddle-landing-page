@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --SoftMagenta: hsl(300, 69%, 71%);
+    box-sizing : border-box;
+    font-size: 1em;
+    }
+    *, ::after, ::before{
+        box-sizing: inherit;
+        margin : 0;
+        padding : 0;
+    }
+    body{
+        font-family: "Open Sans", sans-serif;
+        background-color: var(--Violet);
+        background-image: url(./images/bg-mobile.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: auto;
+        padding : 1.25rem;
+    }
+    header {
+        display: flex;
+        /* align-items: center; */
+        max-height: 70px;
+        margin-bottom : 1.25rem;
+    }
+    header > h1 {
+        text-align: left;
+    }
+    header > h1 > svg{
+        /* transform: scale(0.5); */
+        transform: scale(0.5) translateX(-135px);
+        text-align: left;
+    }
+
+
+    section {
+        display: flex;
+        flex-direction: column;
+        grid-gap  : 20px;
+    }
+    
+    .section-text{
+        /* changed in desktop view */
+        margin-top : 0.625rem;
+        text-align: center;
+        color : white;
+        font-family: Poppins , "sans-serif";
+    }
+    .section-text h3{
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin-bottom : 1rem;
+    }
+    .section-text p{
+        font-size : 1rem;
+        color : lightgray;
+        margin-bottom : 1.5rem;
+    }
+    .btn{
+        border: none;
+        outline: none;
+        font-size : 1.2em;
+        padding : 1rem 4rem;
+        color: var(--Violet);
+        background-color: white;
+        border-radius: 2rem;
+        transition: all 500ms ease-in-out;
+    }
+    .btn--effect:hover{
+        background-color: var(--SoftMagenta);
+        color : white;
+        cursor: pointer;
+    }
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-gap : 10px;
+        margin-top : 3rem;
+    }
+    footer a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color : white;
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        /* background-color: var(--Violet); */
+        border-radius: 50%;
+        border: 1px solid white;
+        transition: all 500ms ease-in-out;
+    }
+    footer a:hover{
+        color : var(--SoftMagenta);
+        border: 1px solid var(--SoftMagenta);
+    }
+
+    img{
+        width: 100%;
+    }
+
+    @media (min-width : 460px) {
+        body{
+            padding :1.25rem 6rem;
+        }
+    }
+
+    /* desktop design */
+    @media (min-width : 800px) {
+        section {
+            flex-direction: row;
+        }
+        section > div{
+            flex : 1;
+        }
+
+        header{
+            margin-bottom : 2.5rem
+        }
+        section {
+            margin-bottom : 4rem;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            padding : 1.25em;
+            height: 100vh;
+            background-image: url(./images/bg-desktop.svg);
+        }
+    }
+    @media (min-width : 1074px) {
+        section {
+            flex-direction: row;
+        }
+        section > div {
+            flex : 1;
+        }
+        .section-text{
+            text-align: unset;
+            padding : 2rem;
+        }
+        .section-text h3{
+            font-size : 2rem;
+        }
+
+        header > h1 > svg{
+            /* transform: scale(0.5); */
+            transform: scale(0.7) translateX(-70px);
+            text-align: left;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding : 5rem;
+            background-image: url(./images/bg-desktop.svg);
+        }
+        footer {
+            justify-content: right;
+        }
+
+    }
